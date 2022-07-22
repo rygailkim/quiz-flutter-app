@@ -6,7 +6,7 @@ import 'package:quizapp/theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const App());
+  runApp(App());
 }
 
 class App extends StatefulWidget {
@@ -17,13 +17,13 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+  // final Future<FirebaseApp> _initialization = Firebase.initializeApp();
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
       // Initialize FlutterFire:
-      future: _initialization,
+      future: Firebase.initializeApp(),
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
