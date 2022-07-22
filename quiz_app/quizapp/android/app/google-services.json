@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "358872307228-uhtgih6kqmigavjm4h5nppt30gf2pdfa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ryannekim.quizapp",
+            "certificate_hash": "8e6ba825cb8a6a42716120c27cca0b46b2431f07"
+          }
+        },
+        {
           "client_id": "358872307228-cbsugtq2ugavtamla76fc9fotpaqpvtu.apps.googleusercontent.com",
           "client_type": 3
         }
