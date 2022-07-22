@@ -17,7 +17,7 @@ class BottomNavBar extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(
-            FontAwesomeIcons.bolt,
+            FontAwesomeIcons.circleQuestion,
             size: 20,
           ),
           label: 'About',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:quizapp/screens/drawer.dart';
 import 'package:quizapp/screens/topic_item.dart';
 import 'package:quizapp/services/firestore.dart';
 import 'package:quizapp/services/models.dart';
@@ -26,7 +27,17 @@ class TopicsScreen extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.deepPurple,
               title: const Text('Topics'),
+              actions: [
+                IconButton(
+                  icon: Icon(
+                    FontAwesomeIcons.circleUser,
+                    color: Colors.pink[200],
+                  ),
+                  onPressed: () => Navigator.pushNamed(context, '/profile'),
+                )
+              ],
             ),
+            drawer: TopicDrawer(topics: topics),
             body: GridView.count(
               primary: false,
               padding: const EdgeInsets.all(20.0),
