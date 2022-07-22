@@ -6,7 +6,7 @@ var appTheme = ThemeData(
   bottomAppBarTheme: const BottomAppBarTheme(
     color: Colors.black87,
   ),
-  brightness: Brightness.dark,
+  brightness: Brightness.light,
   textTheme: const TextTheme(
     bodyText1: TextStyle(fontSize: 18),
     bodyText2: TextStyle(fontSize: 16),
