@@ -11,7 +11,7 @@ class AuthService {
   });
 
   // sign in anon
-  Future signInAnon() async {
+  Future anonLogin() async {
     try {
       final userCredential = await FirebaseAuth.instance.signInAnonymously();
       print("Signed in with temporary account.");
@@ -29,10 +29,10 @@ class AuthService {
     }
   }
 
-  // sign in with email and password
-
-  // register with email and password
+  // sign in with google
 
   // sign out
-
+  Future<void> signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
 }

@@ -4,8 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:quizapp/routes.dart';
 import 'package:quizapp/theme.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(App());
 }
 
