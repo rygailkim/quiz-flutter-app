@@ -6,7 +6,7 @@ import 'package:quizapp/services/models.dart';
 
 class TopicDrawer extends StatelessWidget {
   final List<Topic> topics;
-  const TopicDrawer({Key? key, required this.topics}) : super(key: key);
+  const TopicDrawer({super.key, required this.topics});
 
   @override
   Widget build(BuildContext context) {
