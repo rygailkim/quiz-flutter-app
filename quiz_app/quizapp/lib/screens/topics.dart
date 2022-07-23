@@ -5,6 +5,7 @@ import 'package:quizapp/screens/topic_item.dart';
 import 'package:quizapp/services/firestore.dart';
 import 'package:quizapp/services/models.dart';
 import 'package:quizapp/shared/shared.dart';
+import 'package:quizapp/theme.dart';
 
 class TopicsScreen extends StatelessWidget {
   const TopicsScreen({super.key});
@@ -25,13 +26,13 @@ class TopicsScreen extends StatelessWidget {
 
           return Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.deepPurple,
+              backgroundColor: primaryColor,
               title: const Text('Topics'),
               actions: [
                 IconButton(
                   icon: Icon(
                     FontAwesomeIcons.circleUser,
-                    color: Colors.pink[200],
+                    color: Colors.white,
                   ),
                   onPressed: () => Navigator.pushNamed(context, '/profile'),
                 )

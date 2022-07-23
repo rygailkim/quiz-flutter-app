@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:quizapp/theme.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
@@ -30,7 +31,7 @@ class BottomNavBar extends StatelessWidget {
           label: 'Profile',
         ),
       ],
-      fixedColor: Colors.deepPurple[200],
+      fixedColor: primaryColor,
       onTap: (int idx) {
         switch (idx) {
           case 0:

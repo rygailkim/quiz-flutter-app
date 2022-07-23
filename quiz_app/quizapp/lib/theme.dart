@@ -23,3 +23,6 @@ var appTheme = ThemeData(
   ),
   buttonTheme: const ButtonThemeData(),
 );
+
+var primaryColor = Color.fromARGB(255, 244, 165, 6);
+var accentColor = Color.fromARGB(255, 31, 70, 96);

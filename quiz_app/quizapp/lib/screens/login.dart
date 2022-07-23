@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
               icon: FontAwesomeIcons.userNinja,
               text: 'Continue as Guest',
               loginMethod: AuthService().anonLogin,
-              color: Colors.deepPurple,
+              color: Colors.grey,
             ),
           ],
         ),

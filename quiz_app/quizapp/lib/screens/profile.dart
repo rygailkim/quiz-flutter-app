@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:quizapp/services/auth.dart';
 import 'package:quizapp/services/models.dart';
 import 'package:quizapp/shared/shared.dart';
+import 'package:quizapp/theme.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -22,7 +23,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (user != null) {
       return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: primaryColor,
           title: Text(user.displayName ?? 'Guest'),
         ),
         body: Center(
@@ -30,10 +31,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const Spacer(),
               Container(
                 width: 100,
                 height: 100,
-                margin: const EdgeInsets.only(top: 50),
+                margin: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
@@ -51,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: Theme.of(context).textTheme.subtitle2),
               const Spacer(),
               ElevatedButton(
-                child: const Text('logout'),
+                child: const Text('LOGOUT'),
                 onPressed: () async {
                   await AuthService().signOut();
                   if (mounted) {
