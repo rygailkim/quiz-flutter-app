@@ -37,8 +37,8 @@ class FirestoreService {
   }
 
   /// Updates the current user's report document after completing quiz
-  Future<void> updateUserReport(Quiz quiz) async {
-    var user = await FirebaseAuth.instance.currentUser!;
+  Future<void> updateUserReport(Quiz quiz) {
+    var user = FirebaseAuth.instance.currentUser!;
     var ref = _db.collection('reports').doc(user.uid);
 
     var data = {

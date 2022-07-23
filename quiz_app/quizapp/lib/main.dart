@@ -4,11 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:quizapp/routes.dart';
 import 'package:quizapp/services/firestore.dart';
 import 'package:quizapp/services/models.dart';
+import 'package:quizapp/shared/loading.dart';
 import 'package:quizapp/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
   runApp(App());
 }
 
@@ -36,18 +37,18 @@ class _AppState extends State<App> {
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
           return StreamProvider(
-              create: (_) => FirestoreService().streamReport(),
-              initialData: Report(),
-              child: MaterialApp(
+            create: (_) => FirestoreService().streamReport(),
+            catchError: (_, err) => Report(),
+            initialData: Report(),
+            child: MaterialApp(
                 debugShowCheckedModeBanner: true,
                 routes: appRoutes,
-                theme: appTheme,
-              ));
+                theme: appTheme),
+          );
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
-        // return const MaterialApp(home: LoadingScreen());
-        return Text('loading');
+        return const MaterialApp(home: LoadingScreen());
       },
     );
   }

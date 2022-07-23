@@ -15,6 +15,7 @@ class Loader extends StatelessWidget {
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
+  
 
   @override
   Widget build(BuildContext context) {

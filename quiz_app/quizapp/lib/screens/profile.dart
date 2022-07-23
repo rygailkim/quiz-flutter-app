@@ -22,7 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (user != null) {
       return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Colors.deepPurple,
           title: Text(user.displayName ?? 'Guest'),
         ),
         body: Center(
@@ -36,10 +36,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 margin: const EdgeInsets.only(top: 50),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  // image: DecorationImage(
-                  // image: NetworkImage(user.photoURL ??
-                  //     'https://www.gravatar.com/avatar/placeholder'),
-                  // ),
+                  image: DecorationImage(
+                    image: NetworkImage(user.photoURL ??
+                        'https://www.gravatar.com/avatar/placeholder'),
+                  ),
                 ),
               ),
               Text(user.email ?? '',
